@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <!--View Property Type-->
+    <record model="ir.ui.view" id="property_type_form_view">
+        <field name="name">estate.property.form</field>
+        <field name="model">estate.property.type</field>
+<!--        <field name="model">estate.property</field>-->
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="form view">
+                <field name="name"/>
+<!--                <field name="property_type_id"/>-->
+            </form>
+        </field>
+    </record>
+
+    <!--    Action Property Type-->
+    <record id="estate_property_type_action" model="ir.actions.act_window">
+        <field name="name">Estate Properties</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.property.type</field>
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p>
+                This is a test model for Estate Properties
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <!--View Property Tag || Form View-->
+    <record model="ir.ui.view" id="property_tag_form_view">
+        <field name="name">estate.property.form</field>
+        <field name="model">estate.property.tag</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="form view">
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+
+
+    <!--Tree view-->
+    <record model="ir.ui.view" id="property_tag_tree_view">
+        <field name="name">estate.property.tree</field>
+        <field name="model">estate.property.tag</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="tree view">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    Action Property Type-->
+    <record id="estate_property_tag_action" model="ir.actions.act_window">
+        <field name="name">Estate Properties</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.property.tag</field>
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p>
+                This is a test model for Estate Properties
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

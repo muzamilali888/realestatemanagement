@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--<odoo>-->
+<!--&lt;!&ndash;    Menu    &ndash;&gt;-->
+<!--    <menuitem id="test_menu_root" name="Real-Estate">-->
+<!--        <menuitem id="test_first_level_menu" name="Advertisement">-->
+<!--            <menuitem id="test_model_menu_action" action="test_model_action" name="Properties"/>-->
+<!--        </menuitem>-->
+<!--    </menuitem>-->
+<!--</odoo>-->
+
+<odoo>
+    <!--    Menu    -->
+    <menuitem id="real_estate" name="Real-Estate" action="action_for_estateproperties"/>
+
+
+    <menuitem id="advertisement" name="Advertisement" action="action_for_estateproperties_2"
+              parent="estate.real_estate"/>
+    <menuitem id="test_menu_root_3" name="Properties" action="action_for_estateproperties_2"
+              parent="estate.advertisement"/>
+
+
+    <menuitem id="setting" name="Settings" action="action_for_estateproperties"
+              parent="estate.real_estate"/>
+    <menuitem id="real_state_setting_types" name="Property Types" action="estate_property_type_action"
+              parent="estate.setting"/>
+
+</odoo>
